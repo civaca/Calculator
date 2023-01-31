@@ -1,22 +1,25 @@
-import logo from './logo.svg';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import './App.css';
+import { showValue } from './redux/calcSlice';
+
 
 function App() {
+  const dispatch=useDispatch();
+  const value=useSelector((state)=>state.calc.value)
+
+  let handleClick=()=>{
+    dispatch(showValue("Dios es bueno"))
+    console.log(value)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Calculator</h1>
+        <button onClick={handleClick}>Sum 1</button>
+        <h2>{value}</h2>
+        <p>Loja</p>
       </header>
     </div>
   );
