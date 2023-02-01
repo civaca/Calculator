@@ -1,41 +1,28 @@
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import './App.css';
-import { reset, showExpre, addExpre,resetViewNum,changeViewNum} from './redux/calcSlice';
+import { reset, showExpre, resetViewNum,changeViewNum} from './redux/calcSlice';
 
 
 
 function App() {
   const dispatch=useDispatch();
-  const value=useSelector((state)=>state.calc.value)
-  const newValue=useSelector((state)=>state.calc.newExpre)
-  const newNumber=useSelector((state)=>state.calc.viewNum)
+  
+const newNumber=useSelector((state)=>state.calc.viewNum)
   const newDisplay=useSelector((state)=>state.calc.showDisplay)
-  const Parser = require('expr-eval').Parser;
-  
  
-  
-  const parser = new Parser();
-    
 
 
   
 
  let addToExpre=(x)=>{
-  
-  
-  dispatch(changeViewNum(x))
-
-  
+ dispatch(changeViewNum(x))  
  }
  
  let addToExpre2=(x)=>{
 
- 
-
   dispatch(changeViewNum(x));
   dispatch(resetViewNum(x))
-
   
  }
 
@@ -58,8 +45,7 @@ function App() {
         
         <div >
         
-        <p>{value}</p>
-        <p>{newValue}</p>
+        
         <p>{newNumber}</p>
           
         </div>
