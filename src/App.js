@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import { get_numbers } from './numbers';
 import './App.css';
 import { reset, showExpre, resetViewNum,changeViewNum} from './redux/calcSlice';
 
@@ -28,15 +29,7 @@ function App() {
 //New_feature
 
 useEffect(()=>{
-  document.getElementById("numbers").focus();
-  document.getElementById("numbers").onkeyup=(event)=>{ 
-    switch(event.key){
-      case "0":
-        addToExpre("0");
-          break;        
-  }
-console.log(event.key)}
-
+ get_numbers(addToExpre, addToExpre2,showResult);
  },[])
 
 
@@ -50,7 +43,7 @@ console.log(event.key)}
         <p id="smallDisplay">{newNumber}</p>
         <h2 id="display" >{newDisplay}</h2>
         </div>
-      <div className='App-main'>
+      <div className='App-main' id="main_body">
         <div id="numbers">
           <button id="zero" className='num' onClick={()=>addToExpre("0")}>0</button>
           <button id="one" className='num' onClick={()=>addToExpre("1")}>1</button>
