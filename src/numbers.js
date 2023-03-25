@@ -53,6 +53,6 @@ document.getElementById("all").onkeyup=(event)=>{
       f3();
         break; 
     default: // Do nothing
-}
-}
+    }
+  }
 }
