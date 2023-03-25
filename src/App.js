@@ -33,17 +33,17 @@ useEffect(()=>{
  },[])
 
 
-
-
   return (
     <div className="App">
       
         <h1>Calculator</h1>
+        <button id="all">
         <div id="head">
         <p id="smallDisplay">{newNumber}</p>
         <h2 id="display" >{newDisplay}</h2>
         </div>
-      <div className='App-main' id="main_body">
+      
+      <div className='App-main' >
         <div id="numbers">
           <button id="zero" className='num' onClick={()=>addToExpre("0")}>0</button>
           <button id="one" className='num' onClick={()=>addToExpre("1")}>1</button>
@@ -66,7 +66,8 @@ useEffect(()=>{
         <button id="clear" className='oper'onClick={()=>dispatch(reset())}>AC</button>
         </div>
         </div>
-    </div>
+        </button>
+  </div>
   );
 }
 

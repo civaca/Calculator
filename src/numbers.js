@@ -1,7 +1,8 @@
 
 
-export function get_numbers(addToExpre,f2,f3,f4){ document.getElementById("main_body").focus();
-document.getElementById("main_body").onkeyup=(event)=>{ 
+export function get_numbers(addToExpre,f2,f3,f4){ 
+  document.getElementById("all").focus();
+document.getElementById("all").onkeyup=(event)=>{ 
   switch(event.key){
     case "0":
       addToExpre("0");
@@ -48,7 +49,7 @@ document.getElementById("main_body").onkeyup=(event)=>{
     case ".":
       addToExpre(".");
         break;  
-    case "Enter":
+    case "=":
       f3();
         break; 
     default: // Do nothing

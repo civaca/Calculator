@@ -1,5 +1,5 @@
 :root{
-  --wdth:clamp(350px,50%,70%);
+  --wdth:clamp(350px,90%,100%);
   --cd:#f5f1ed;
   --cd2:#ef8354;
 }
@@ -8,6 +8,8 @@
   text-align: center;
   box-sizing:border-box;
   padding: 0;
+ 
+
   
 }
 .App-main{
@@ -51,7 +53,7 @@
  
 }
 #head{
-  height: 4rem;
+  height: 4.2rem;
   width: var(--wdth);
   margin:auto;
   background-color: var(--cd);
@@ -62,13 +64,15 @@
   height: 40%;
   color: var(--cd2);
   width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
+  
 
 }
 #display{
   margin: 0;
   padding:0;
+  height: 40px;
 }
 #clear{
   background-color: rgb(185, 32, 32);;
@@ -78,6 +82,17 @@
 h1{
   font-weight: 800;
   font-family:Tahoma;
+}
+#all{
+  margin:3px 0px 0px 0px;
+  padding: 0px;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+#all:focus{
+  border: none;
+  outline: none;
 }
 
 
