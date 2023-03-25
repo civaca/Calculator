@@ -54,5 +54,5 @@ document.getElementById("all").onkeyup=(event)=>{
         break; 
     default: // Do nothing
 }
-console.log(event.key)}
+}
 }
